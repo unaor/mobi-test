@@ -1,8 +1,7 @@
 package com.uri.mobi.service;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 import org.junit.Test;
@@ -22,7 +21,7 @@ public class PretiffierTest {
 		
 	}
 	
-	@Test
+	/*@Test
 	public void isNumberBiggerThanMega(){
 		BigDecimal number  = new BigDecimal(300);
 		assertTrue(numberPrettifier.isLessThanMega(number));
@@ -33,7 +32,7 @@ public class PretiffierTest {
 		number = new BigDecimal(6500000);
 		assertFalse(numberPrettifier.isLessThanMega(number));
 		
-	}
+	}*/
 	
 	@Test
 	public void prettifySmallNumber(){
@@ -52,7 +51,7 @@ public class PretiffierTest {
 		assertEquals("12.8T", numberPrettifier.prettify(12800070000000.876f));
 	}
 	
-	@Test
+	/*@Test
 	public void isMegaNumber(){
 		BigDecimal number  = new BigDecimal(2000000);
 		assertTrue(numberPrettifier.isMegaNumber(number));
@@ -64,7 +63,7 @@ public class PretiffierTest {
 		assertTrue(numberPrettifier.isMegaNumber(number));
 		number  = new BigDecimal(2000000000);
 		assertFalse(numberPrettifier.isMegaNumber(number));
-	}
+	}*/
 	
 	@Test
 	public void prettifyMegaNumber(){

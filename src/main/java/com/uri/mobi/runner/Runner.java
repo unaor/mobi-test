@@ -3,6 +3,7 @@ package com.uri.mobi.runner;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import com.uri.mobi.service.NumberPrettifier;
 import com.uri.mobi.service.NumberPrettifierImpl;
 
 public class Runner {
@@ -30,7 +31,7 @@ public class Runner {
 				break;
 			}
 			
-			NumberPrettifierImpl np = new NumberPrettifierImpl();
+			NumberPrettifier np = new NumberPrettifierImpl();
 			
 			System.out.println(np.prettify(input));
 		}

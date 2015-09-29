@@ -2,7 +2,9 @@ package com.uri.mobi.service;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
-
+/*		
+ * Class that implements the prettify method.
+ */
 public class NumberPrettifierImpl implements NumberPrettifier {
 
 	private final DecimalFormat df = new DecimalFormat();
@@ -12,9 +14,6 @@ public class NumberPrettifierImpl implements NumberPrettifier {
 		df.setGroupingUsed(false);
 	}
 
-	/**
-	 * @
-	 */
 	public String prettify(float numberToPrettify) {
 		// first lets evaluate the number size
 		BigDecimal number = new BigDecimal(numberToPrettify);
@@ -34,7 +33,7 @@ public class NumberPrettifierImpl implements NumberPrettifier {
 		
 	}
 
-	public boolean isLessThanMega(BigDecimal number) {
+	private boolean isLessThanMega(BigDecimal number) {
 		// TODO : change to private and use reflection for testing.
 		if (number.longValue() / NumberPrettifier.MEGA > 0) {
 			return false;
@@ -43,7 +42,7 @@ public class NumberPrettifierImpl implements NumberPrettifier {
 		}
 	}
 
-	public boolean isMoreThanTeraNumber(BigDecimal number) {
+	private boolean isMoreThanTeraNumber(BigDecimal number) {
 		if (number.longValue() / NumberPrettifier.TERA < 1) {
 			return false;
 		} else {
@@ -59,7 +58,7 @@ public class NumberPrettifierImpl implements NumberPrettifier {
 		return formattedNumber + "T";
 	}
 
-	public boolean isMegaNumber(BigDecimal number) {
+	private boolean isMegaNumber(BigDecimal number) {
 		if (number.longValue() / NumberPrettifier.MEGA > 0 && number.longValue() / NumberPrettifier.GIGA < 1) {
 			return true;
 		} else {
