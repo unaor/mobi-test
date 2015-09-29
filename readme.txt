@@ -2,6 +2,9 @@
 
 In order to use this program you can do one of the following:
 
+in your browser open the following link
+https://github.com/unaor/mobi-test
+
 1. Clone this project to your local machine.
 2. From your IDE find the Runner.java class (com.uri.mobi.runner) and execute its main method.
 
